@@ -1,4 +1,4 @@
-import jQuery from "./core.js";
+import jQuery from "./essential.js";
 import toType from "./core/toType.js";
 import rnothtmlwhite from "./var/rnothtmlwhite.js";
 

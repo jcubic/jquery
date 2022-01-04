@@ -23,14 +23,19 @@
     "url": "https://github.com/jquery/jquery/issues"
   },
   "license": "MIT",
-  "dependencies": {},
+  "dependencies": {
+    "cash-dom": "8.1.0"
+  },
   "devDependencies": {
     "@babel/core": "7.10.5",
     "@babel/plugin-transform-for-of": "7.10.4",
+    "browser-resolve": "2.0.0",
+    "browserify": "17.0.0",
     "commitplease": "3.2.0",
     "core-js-bundle": "3.6.5",
     "eslint-config-jquery": "3.0.0",
     "eslint-plugin-import": "2.25.2",
+    "esmify": "2.1.1",
     "grunt": "1.2.1",
     "grunt-babel": "8.0.0",
     "grunt-cli": "1.3.2",
@@ -69,6 +74,7 @@
     "uglify-js": "3.4.7"
   },
   "scripts": {
+    "cash": "browserify -s cash -p esmify cash.js | uglifyjs > cash.min.js",
     "build": "npm install && grunt",
     "start": "grunt watch",
     "test:browserless": "grunt && grunt test:slow",
